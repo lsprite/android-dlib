@@ -11,7 +11,7 @@
  *
  * Copyright (c) 2016 Tzutalin. All rights reserved.
  *
- * Modified by nemo on Nov 21, 2018
+ * Modified by Lightweh on Nov 21, 2018
  */
 
 namespace jniutils {

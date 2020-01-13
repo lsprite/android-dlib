@@ -15,7 +15,7 @@ import androidx.annotation.WorkerThread;
  * Created by houzhi on 16-10-20.
  * Modified by tzutalin on 16-11-15
  * Modified by Gaurav on Feb 23, 2018
- * Modified by nemo on Nov 21, 2018
+ * Modified by Lightweh on Nov 21, 2018
  */
 
 public class FaceDet {
@@ -31,7 +31,6 @@ public class FaceDet {
             jniNativeClassInit();
             Log.d(TAG, "jniNativeClassInit success");
         } catch (UnsatisfiedLinkError e) {
-            e.printStackTrace();
             Log.e(TAG, "library not found");
         }
     }

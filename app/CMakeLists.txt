@@ -10,6 +10,7 @@ cmake_minimum_required(VERSION 3.4.1)
 #set(DLIB_NO_GUI_SUPPORT true) #不需要gui支持
 #set(ARM_NEON_IS_AVAILABLE true) #开启neon优化
 #set(DLIB_PNG_SUPPORT true) #打开PNG支持
+#set(DLIB_JPEG_SUPPORT true) #打开JPEG支持
 #
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.

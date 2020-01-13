@@ -122,8 +122,13 @@ DLIB_FACE_JNI_METHOD(jniBitmapDet)(JNIEnv *env, jobject thiz, jobject bitmap) {
     jniutils::ConvertBitmapToRGBAMat(env, bitmap, rgbaMat, true);
     cv::cvtColor(rgbaMat, bgrMat, cv::COLOR_RGBA2BGR);
     DetPtr mDetPtr = getDetPtr(env, thiz);
-    jint size = mDetPtr->Detect(bgrMat);
-    return getRecResult(env, mDetPtr, size);
+    if (mDetPtr != JAVA_NULL) {
+        jint size = mDetPtr->Detect(bgrMat);
+        return getRecResult(env, mDetPtr, size);
+    } else {
+        jobjectArray jDetRetArray = JNI_VisionDetRet::createJObjectArray(env, 0);
+        return jDetRetArray;
+    }
 }
 
 jint JNIEXPORT JNICALL
